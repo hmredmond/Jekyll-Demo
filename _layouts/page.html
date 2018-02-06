@@ -12,7 +12,7 @@ layout: base
     <div class="row">
       <div class="col-sm-8 col-xs-12">      
         <div class="wrapper page-content {% if page.permalink == '/sitemap/' %} sitemap {% endif %}"> 
-          {{ content | regexremoveXSSFromBodyText }}
+          {{ content  }}
         </div>
       </div>
     </div>
