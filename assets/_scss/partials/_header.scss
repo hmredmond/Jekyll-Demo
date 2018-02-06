@@ -1,0 +1,124 @@
+header.site-header {
+    border-bottom: 1px solid $light-gray;
+    margin-left: -20px;
+    margin-right: -20px;
+    min-height: 70px;
+    .header-logo {
+        padding: 0;
+        @media(max-width:$xsmall-breakpoint){
+            width: calc(100% - 100px);
+        }
+        width: 275px;
+        img {
+            height:auto;
+            margin: 0px 0;
+            padding: 10px 0 8px;
+        }
+    }
+    .header-menu {
+        margin: 0 !important;
+    }
+    li > span > a{
+        color:$black;
+    }
+    @media(max-width: $medium-breakpoint){
+        .header-logo {
+            padding: 0 20px;
+        }
+        .menu-container{
+            margin-left:-10px;
+            margin-right:-10px;
+        }
+        ul.nav > li > span{
+            padding:0;
+            display: block;
+            width: 90%;
+        }
+        ul.nav > li > span > a {
+            margin-left:30px;
+            padding:10px;
+            width:90%;
+            display:inline-block;
+        }
+    }
+    @media (min-width: $medium-breakpoint) {
+        .header-menu {
+            float: right;
+        }
+      
+    }
+    .navbar-toggle {
+        margin-right: 30px;
+        padding: 0;
+    }
+    .navbar-header {
+        button {
+            margin-top: 25px;
+            box-shadow: none;
+            span{
+                display: inline-block;
+            }
+            &.collapsed{
+                svg{
+                    transform: rotate(0deg);   
+                }
+            }
+            svg{
+                fill:$black;
+                width:6px;
+                height:6px;
+                transform: rotate(180deg);
+                position: relative;
+                top: -2px;
+            }
+        }
+    }
+    .navbar-nav {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        @media (max-width: $medium-breakpoint) {
+            li {
+                border-top: 1px solid $light-gray;
+
+                span{
+                    display:inline-block;
+                    padding:10px;
+                }
+            }
+        }
+        
+        @media (min-width: $medium-breakpoint) {
+            li {
+                padding-left: 10px;
+                a:hover, &:hover{
+                    a{
+                        text-decoration: none;
+                        background: $cornflowerBlue;
+                    }
+                }
+                &.active{
+                    span a{
+                        border-bottom:5px solid $cornflowerBlue;
+                    }
+
+                    a:hover, &:hover{
+                        a{
+                            text-decoration: none;
+                            background: transparent;
+                        }
+                    }
+
+                }
+                & > span {
+                    padding: 25px 0 10px 5px;
+                    display:inline-block;
+                    & > a {
+                        padding: 10px;
+                       
+                    }
+                }
+            }
+        }
+    }
+}

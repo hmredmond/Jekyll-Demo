@@ -1,0 +1,119 @@
+table {
+  color: $dark-font-color;
+  text-align: left;
+  width:100%;
+  margin:$default-padding * 2 0;
+  thead {
+      background-color: $white;
+      color: $dark-font-color;
+    
+
+    tr {
+      padding: 0 $default-padding * 2;
+      
+      td,
+      th {
+        @extend %bold-font;
+        @include font-size(16px);
+        font-weight: bold;
+        padding: $default-padding $default-padding !important;
+        vertical-align: middle !important;
+      }
+    }
+
+  }
+
+  &.error-table
+  {
+    thead {
+      background-color: $white;
+      color: $dark-font-color;
+    }
+
+  }
+
+  tbody {
+    font-size: 1.6rem;
+
+    tr {
+      background-color: #ddd;
+
+      td {
+        padding: 8px $default-padding;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width : $small-breakpoint) {
+  .page table{
+    border:none;
+  
+    thead tr{
+      td, th{
+        display: none
+      }
+    }
+    tbody {
+
+      tr{
+        &:first-child{
+          border-top:1px solid $gray;
+        }
+        border-bottom:1px solid $gray;
+        &:nth-child(2n+1){
+          background-color : $white;
+        }
+        th {
+          margin-top: $default-padding * 2;
+        }
+        td, th{
+          padding-top:10px;
+          padding-bottom:0;
+          border-right-width:0px;
+          text-align: left;
+          display: block;
+          padding-left:0;
+          @include line-height(20px);
+          text-align:left!important;
+          border-top-width: 0px;
+          &:last-child{
+            padding-bottom:10px;
+          }
+          .ui-table-cell-label {
+            min-width: 25%;
+            display: inline-block;
+            margin: 0 ;
+            font-family: 'raleway-bold', 'helvetica';
+          }
+
+          &.unspecified{
+            height:10px;
+            padding:0;
+            margin:0;
+          }
+        }
+      }
+
+     
+    }
+    
+  }
+
+}
+
+
+@media (min-width: 35em) {
+  table td,table th,table tbody th,table tbody td,table thead td,table thead th {
+      display:table-cell;
+      margin: 0
+  }
+
+  table td .ui-table-cell-label,table th .ui-table-cell-label {
+      display: none
+  }
+}
+
+

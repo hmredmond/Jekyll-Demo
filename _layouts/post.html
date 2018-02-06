@@ -1,0 +1,50 @@
+---
+layout: base
+---
+
+{% capture isAffiliate %}{% if page.categories contains "affiliate" %}Yes{% else %}No{% endif %}{% endcapture%}
+
+{% if isAffiliate == 'Yes' %}
+  <div class=" affiliate-overlay page-padding-top post" style="background-image:url('/uploads/Promo_Affiliates.png');">      
+    <div class='section-container' >
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+             
+              <h1> {{site.affiliate-header.title  | escape}}</h1>
+              <p class='page-subtext'>{{site.affiliate-header.summary  | escape}}</p>
+            </div>
+          </div>
+    </div>
+  </div>
+{% endif %}
+
+
+<div id="body-container"  class="container post">
+  <div id="content-container" class="content-wrapper">  
+
+    <div class="row"> 
+      <div class="col-sm-8 col-xs-12">
+        <p class="left post-date">{{page.date|date_to_long_string|escape}}</p>
+        <h1 class="block-header">{{page.title | escape}}</h1>
+      </div>  
+    </div>
+  
+    <div class="row">
+      <div class="col-sm-8  col-xs-12"> 
+        {% if isAffiliate == 'No' %}
+          <div class="summary-intro">{{page.summary  | escape}}</div>
+        {% endif %}
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="post-content col-xs-12">
+                {{ content  | regexremoveXSSFromBodyText}}
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+.ie-9{
+    .options-information-section .options-info-section .static-card-content a{
+        position:inherit;
+        left:0;
+        bottom:0;
+    }
+}
+
+[class*='ie-']{
+    .feedback-banner .feedback-banner-content a {
+        height:30px;
+        padding-top:5px;
+    }
+
+    .feedback-banner .feedback-banner-content svg{
+        position: relative;
+        top:5px;
+    }
+
+    
+
+    
+.checklist-tick{
+    height:45px;
+    svg{
+        height:20px;
+        width: 20px;
+    }
+    & + span{
+        float: left;
+        width: calc(100% - 40px);
+        margin-bottom:10px;
+    }
+}
+    svg{
+        height:40px;
+        width: 40px;
+    }
+
+    .affiliate-item .button{
+        padding-right:0;
+        margin-right:10px;
+    }
+}

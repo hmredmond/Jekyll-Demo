@@ -1,0 +1,20 @@
+---
+title: Page Not Found
+date: 2017-09-01 13:21:00 Z
+permalink: "/pages/404.html"
+summary: If you have entered a web address please check it was entered correctly.
+layout: page
+---
+
+If you have entered a web address please check it was entered correctly.
+
+The Cyber Essentials site is new so existing bookmarks for previous content may not redirect correctly.
+
+It is also possible the page or content has been deleted.
+You can browse from the [homepage](/) to find the information you need.
+
+It is also possible the page or content has been deleted.
+
+You can search [NCSC.gov.uk](www.NCSC.gov.uk) or browse from the homepage to find the information you need.
+
+You can also get an overview of all content available from the [sitemap](/sitemap).

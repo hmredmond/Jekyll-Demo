@@ -1,0 +1,40 @@
+
+@font-face {
+  font-family: 'raleway-regular';
+  src: url('../fonts/raleway/Raleway-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'raleway-thin';
+  src: url('../fonts/raleway/Raleway-Thin.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'raleway-light';
+  src: url('../fonts/raleway/Raleway-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'raleway-bold';
+  src: url('../fonts/raleway/Raleway-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'raleway-semibold';
+  src: url('../fonts/raleway/Raleway-SemiBold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'raleway-extrabold';
+  src: url('../fonts/raleway/Raleway-ExtraBold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+
+
+
+.glyphicon{
+  &.glyphicon-remove-circle{
+    background-image: url(/assets/img/bootstrap.svg);
+    background-repeat: no-repeat;
+  }
+}

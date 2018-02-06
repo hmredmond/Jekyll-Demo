@@ -1,0 +1,78 @@
+{% assign footerData = site.menus | where:"title", "Footer Navigation" | first %}
+
+<footer id="footer">
+    
+    <div class="footer-content section-container">
+        {% if footerData.sponsors.size > 0 %}
+        <h3>Brought to you by</h3>
+        {% for link in footerData.sponsors %}
+        <div class='sponsor-wrapper'>
+            <a href='{{link.url| escape}}' title='Link to the {{link.name| escape}} website'>
+                <img src="{{link.image| escape}}" alt="{{link.name| escape}} logo" />
+            </a>
+        </div>
+        {% endfor %}
+        {% endif %}
+        <div class="footer-quick-links row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                {% if footerData.items.vertical1.size > 0 %}
+                    <h3>{{ footerData.verticalheading1 | escape}}</h3>
+                
+                   
+                    <hr/>
+                    <ul>
+                        {% for link in footerData.items.vertical1 %}
+                        <li>
+                            <a href="{{link[1]| escape}}">{{link[0]| escape}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                    {% if footerData.items.vertical2.size > 0 %}
+                    <h3>{{ footerData.verticalheading2 | escape}}</h3>
+                    
+                    <hr/>
+                    <ul>
+                        {% for link in footerData.items.vertical2 %}
+                        <li>
+                            <a href="{{link[1]| escape}}">{{link[0]| escape}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                    {% if footerData.items.vertical3.size > 0 %}
+                    <h3>{{ footerData.verticalheading3 | escape}}</h3>
+                    
+                    <hr/>
+                    <ul>
+                        {% for link in footerData.items.vertical3 %}
+                        <li>
+                            <a href="{{link[1]| escape}}">{{link[0]| escape}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+        <hr/>
+        <div class="row footer-meta">
+            <ul class="footer-support-links col-sm-9">
+                {% for link in footerData.items.horizontal %}
+                <li class="{% if page.url == link[1] %}active{% endif %}" ><a href="{{link[1]| escape}}">{{link[0] | escape}}<a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% if footerData.items.copyright.size > 0 %}
+            <div class="col-sm-3 footer-copyright" >
+              <a href="{{footerData.items.copyright.url | escape}}" rel="external">
+                  <span>&copy; {{footerData.items.copyright.title | escape}}</span>
+              </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,31 @@
+{% assign categories = page.categories  %}
+{% assign foundPromo = false %}
+{% for category in categories %}
+
+    {% if foundPromo == false %}
+ 
+        {%assign promos = site.promos | where : 'categories', category  %}
+
+        {% for promo in promos reversed %}
+            {% if foundPromo == false %}
+                {% assign foundPromo = true %}
+                {% capture isGuidance %}{% if promo.categories contains "guidance" %}Yes{% else %}No{% endif %}{% endcapture%}
+                {% capture isCertification %}{% if promo.categories contains "certification" %}Yes{% else %}No{% endif %}{% endcapture%}
+                {% capture isAffiliate %}{% if promo.categories contains "affiliate" %}Yes{% else %}No{% endif %}{% endcapture%}
+                              
+                <section class="promo-section {{promo.categories | join: " "  | escape}}">
+                        <div class="overlay-promo-image" style="background-image:url({{promo.image | escape}})"></div>
+                        <div class="section-container">
+                            <div class='{% if isGuidance == "Yes" %} col-lg-7 col-md-5 col-sm-9 col-xs-10 {% endif %} {%  if isCertification  == "Yes" %} col-lg-8 col-md-7 col-xs-9  {% endif %} {% if isAffiliate  == "Yes" %} col-md-10  col-sm-10 col-xs-12 {% endif %}'>
+                                <h3>{{promo.title | escape}}</h3>
+                                <p>{{promo.subtitle| escape}}</p>
+                                <div class="action-wrapper">
+                                    <a class='button {% if isGuidance == "Yes" %} white {% endif %} {%  if isCertification  == "Yes" %} white {% endif %} {% if isAffiliate  == "Yes" %} blue {% endif %} ' title='Click to go to {{promo.button.title | escape}} promotion' href='{{promo.button.link | escape}}'>{{promo.button.label  | escape}}</a>
+                                </div>                  
+                            </div>    
+                        </div>
+                    </section>
+            {% endif %}
+        {% endfor %}
+    {% endif%}
+{% endfor %}

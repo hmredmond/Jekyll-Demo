@@ -1,0 +1,153 @@
+
+// .navbar-toggle {
+//   border: none;
+//   background: transparent !important;
+//   margin-right: 0;
+//
+//   &:hover {
+//     background: transparent !important;
+//   }
+//
+//   .icon-bar {
+//     background-color: $dark-font-color;
+//     width: 30px;
+//     height: 4px;
+//     transition: all 0.2s;
+//   }
+//   .top-bar {
+//     transform: rotate(45deg);
+//     transform-origin: 10% 10%;
+//   }
+//   .middle-bar {
+//     opacity: 0;
+//   }
+//   .bottom-bar {
+//     transform: rotate(-45deg);
+//     transform-origin: 10% 90%;
+//   }
+//
+//   &.collapsed {
+//     .top-bar {
+//       transform: rotate(0);
+//     }
+//     .middle-bar {
+//       opacity: 1;
+//     }
+//     .bottom-bar {
+//       transform: rotate(0);
+//     }
+//   }
+// }
+//
+// .header-row .navbar-nav {
+//
+//   @media(max-width: $medium-breakpoint) {
+//     margin: 0;
+//   }
+//
+//   @media(min-width: $small-breakpoint){
+//     position: relative;
+//     left: 27px;
+//   }
+//
+//   @media(min-width: $medium-breakpoint){
+//     position: relative;
+//     left: 8px;
+//   }
+//
+//   li {
+//
+//     &.secondary{
+//       @media(min-width:$small-breakpoint){
+//         display: none;
+//       }
+//       @media (max-width: $medium-breakpoint) {
+//         &:hover{
+//           background-color:#eee;
+//         }
+//       }
+//     }
+//
+//     a,
+//     button {
+//       @extend %menu-font;
+//       padding:$default-padding;
+//
+//       @media(max-width: $xsmall-breakpoint) {
+//         padding-bottom: $default-padding * 1.5;
+//         padding-top: $default-padding * 1.5;
+//         /*padding-left: 0 !important;
+//         padding-right: 0 !important;*/
+//
+//         &:hover,
+//         &:focus {
+//           font-weight: 600;
+//           background-color: transparent;
+//         }
+//       }
+//
+//       &:hover{
+//         border-bottom: 5px solid #eee;
+//       }
+//     }
+//
+//     &.active {
+//       a,
+//       button {
+//         @extend %bold-font;
+//         border-bottom: 5px solid $pink;
+//
+//       }
+//     }
+//
+//
+//     // Button rework to match anchors
+//     button {
+//       background-color: transparent;
+//       border: 0;
+//       line-height: 2rem; // Buttons are getting different line heights?
+//       padding-left: $default-padding;
+//       padding-right: $default-padding;
+//
+//     }
+//   }
+//
+// }
+//
+// .navbar-collapse {
+//
+//     @media(max-width: ($small-breakpoint)-1) {
+//
+//       padding: 0;
+//       margin-right: 40px;
+//       .navbar-nav {
+//         float: none;
+//         margin: 0;
+//
+//         li {
+//           display: block;
+//           border-top: 1px solid $light-gray;
+//           a, form{
+//             padding-left:10rem;
+//             margin-left:0;
+//             &:hover{
+//               border-bottom-width: 0;
+//             }
+//             button{
+//               padding:15px 0;
+//             }
+//           }
+//         }
+//         li.active a{
+//           border-bottom: none;
+//           &:hover{
+//             border-bottom-width: 0;
+//           }
+//         }
+//       }
+//
+//     }
+//
+//   }
+//
+

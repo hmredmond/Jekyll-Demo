@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// Custom styles for Cyber First - Girls Competition
+//
+// @author Gareth Parker - BAE AI Creative
+// -----------------------------------------------------------------------------
+
+$imgDir:'/assets/img/';
+@import "mixins";
+
+@import "config/**/*.scss";
+// Import partials from `scss` 
+
+//use this when glob enabled
+@import "partials/*.scss";
+@import "partials/browser/*.scss";

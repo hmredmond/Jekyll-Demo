@@ -1,0 +1,154 @@
+$min-height:320px;
+.promo-section{
+    position:relative;
+    
+    padding:$default-padding 0;
+    min-height:$min-height;
+   
+    .page &{
+        margin:auto -20px;
+    }
+    @media(max-width: $small-breakpoint){
+        
+        padding:0;
+        display:inline-block;
+        .page &{
+            margin-bottom: -5px;
+        }
+        margin-bottom: -5px;
+    }
+    .overlay-promo-image{
+        background-position-y:bottom;
+        background-position-x:725px;
+        @media(min-width: $large-breakpoint){
+            background-position-x: calc(50% + 560px);
+        }
+        @media(max-width: $medium-breakpoint){
+            background-position-x: 470px;
+            
+        }        
+    }    
+
+    &.guidance {
+        .overlay-promo-image{
+            background-position-y: calc(100% + 80px);
+            background-position-x: calc(100%);
+           
+            @media(min-width: 1500px){
+                background-position-x: 75%;
+            }
+
+            @media(max-width: $medium-breakpoint){
+                background-position-x: 475px;
+         
+                
+            }
+
+            @media(max-width: $small-breakpoint){
+                background-position-x: -110%;
+                
+            }
+
+            @media(max-width: $xsmall-breakpoint){
+                background-position-x: 180px;
+                background-position-y: 0px;
+                background-size: cover;
+            }
+        }
+    }
+
+    &.certification {
+        .overlay-promo-image{
+            
+            background-size: contain;
+
+            @media(min-width: $medium-breakpoint){
+                background-position-y: 25px;
+                background-position-x: 120%;
+            }       
+           
+            @media(min-width: $large-breakpoint){
+                background-position-x: 100%;
+            }
+            
+
+            @media(min-width: 1500px){
+                background-position-x: 85%;
+            }
+
+            @media(min-width: 2000px){
+                background-position-x: 75%;
+            }
+
+            @media(max-width: $small-breakpoint){
+                background-position-x: 235px;
+            }
+            @media(max-width: $xsmall-breakpoint){
+                background-position-x: 125px;
+                background-size: cover;
+            }
+        }
+    }
+
+    &.affiliate {
+        .overlay-promo-image{
+            @media(max-width: $small-breakpoint){
+                background-position-x: 120px;
+            }
+            @media(max-width: $xsmall-breakpoint){
+                background-position-x: 70px;
+            }
+        }
+    }
+
+    h3{
+        font-family:'raleway-regular',Helvetica;
+        @include font-size(36px);
+        @include line-height(36px);
+    }
+    p{
+        @include font-size(24px);
+        @include line-height(33px);
+    }
+    .action-wrapper{
+        padding-top:$default-padding;
+        padding-bottom:$default-padding;
+    }
+    [class*=col]{
+        padding-left:0px;
+        padding-right:0px;
+    }
+    @media(max-width: $medium-breakpoint) {
+        [class*=col]{
+            padding-left:20px;
+            padding-right:20px;
+        }
+    }
+    @media(max-width: $small-breakpoint) {
+        [class*=col]{
+            padding-left:10px;
+            padding-right:10px;
+        }
+    }
+    @media(max-width: $xsmall-breakpoint) {
+        [class*=col]{
+            padding-left:0px;
+            padding-right:0px;
+        }
+    }
+
+
+    @media(max-width: $xsmall-breakpoint) {
+        padding-bottom:$default-padding * 2;
+        h3{
+            @include font-size(32px);
+            @include line-height(38px);
+        }
+        p{
+            @include font-size(18px);
+            @include line-height(24px);
+        }
+      
+    }
+    
+}
