@@ -1,0 +1,100 @@
+---
+title: Jekyll Seed
+timezone: UTC
+collections:
+  homepages:
+    title: Homepage
+    output: true
+    header:
+      is-visible: false
+      title: 
+      subtext: 
+    recent_posts:
+      is-visible: false
+  information-pages:
+    title: Information
+    output: true
+  menus:
+    title: Menus
+    output: false
+  posts:
+    title: Posts
+    output: true
+  promos:
+    title: Promos
+    output: false
+    action:
+      label: 
+      link: 
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: promos
+  values:
+    image: 
+    summary: 
+    button:
+      label: 
+      link: 
+- scope:
+    path: ''
+    type: homepages
+  values:
+    header:
+      is-visible: false
+      title: 
+      subtext: 
+    recent-posts:
+      title: 
+      is-visible: false
+    layout: homepage
+- scope:
+    path: ''
+    type: posts
+  values:
+    summary: 
+    layout: post
+- scope:
+    path: ''
+    type: pages
+  values:
+    summary: 
+    layout: page
+- scope:
+    path: ''
+    type: information-pages
+  values:
+    summary: 
+    downloads:
+    - file: 
+      title: 
+      type: 
+    layout: information_page
+  values:
+    logo-image: 
+    link: 
+    order: 
+lang: en-GB
+logo: "/assets/img/logo.svg"
+url: https://url.com
+description: ##Description of site##
+name: ##Name of Site##
+baseurl: 
+piwik:
+  id: 0
+  domain: piwiki.domain
+imgurl: "/assets/img/"
+include:
+- _static
+destination: _site
+sass:
+  sass_dir: assets/scss
+  style: compressed
+plugins:
+- jekyll
+- jekyll-sitemap
+- jekyll-seo-tag
+exclude: ['node_modules', '_workflow', 'gulpfile.js']

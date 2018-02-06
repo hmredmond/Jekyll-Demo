@@ -1,0 +1,21 @@
+.button, button{
+
+    padding: 7px 10px 10px;
+    box-shadow: inset 0 -2px 0 0 black;
+    @include font-size(19px);
+
+
+    &.primary, &.blue{
+        background-color:$blue;
+        color:$white;
+    }
+
+    &.secondary, &.white{
+        background: $white;
+        color:$blue;    
+    }
+
+    &.small{
+        @include font-size(14px);
+    }
+}

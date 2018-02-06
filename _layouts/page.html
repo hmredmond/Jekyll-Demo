@@ -1,0 +1,21 @@
+---
+layout: base
+---
+
+<div id="body-container"  class="container page-padding-top">
+  <div id="content-container">
+    <div class="row">
+      <div class="col-sm-8 col-xs-12">      
+        <h1 class="block-header"> {{page.title  | escape}}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 col-xs-12">      
+        <div class="wrapper page-content {% if page.permalink == '/sitemap/' %} sitemap {% endif %}"> 
+          {{ content  }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

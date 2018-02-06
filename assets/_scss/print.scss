@@ -1,0 +1,93 @@
+@media print {
+
+    html{
+        /* style sheet for print goes here */
+        #feedback-banner, .cookie-consent-container.show-cookie-consent, .link-to-download-section{
+            display:none!important;
+        }  
+
+        ul {
+            padding-left: 20px!important;
+            list-style: disc!important;
+        }
+
+        footer{
+            img{
+                display: none;
+            }
+        }
+        .site-header *{
+            float:none!important;
+        }
+        .header-hero-item{
+            min-height: 0;
+        }
+        .header-hero-item .section-container{
+            height: auto!important;
+        }
+        [class*='half-section-container']{
+            margin-bottom: 0;
+        }
+
+        section, footer{
+            border-top:1px solid #ccc;
+        }
+        .actions-container{
+            display: inline-block;
+        }
+
+        .card-action .post-link{
+            display:none!important;
+        }
+        .card-action{
+            display:inline-block!important;
+        }
+        .cards .card .card-content{
+            min-height: 0;
+            width:100%;
+            float:left;
+        }
+        [class*='col-'], [class*='half-section-container']{
+            width:100%;
+            float:none;
+            display:inline-block!important;
+        }
+        .page section.guidance-home-hero.guidance{
+            min-height:0;
+        }
+        .guidance-list{
+           .image-wrapper img{
+                display:none;
+            }
+            ul li {
+                .title{
+                    padding-top:0;
+                }
+                .details{
+                    padding-bottom:0;
+                }
+            }
+        }
+        .plain-list, 
+        .icon-list{
+            list-style: disc;
+            padding-left:0px!important;
+        }
+
+        .affiliate-overlay{
+            .page-subtext{
+                padding-bottom:0;
+                margin-bottom: 0;
+            }
+        }
+
+        .download-wrapper{
+            .icon{
+                display:none;
+            }
+            .details-wrapper{
+                float:none!important;
+            }
+        }
+    }
+}

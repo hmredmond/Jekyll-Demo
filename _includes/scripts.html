@@ -1,0 +1,10 @@
+<!-- JS -->
+<script type="text/javascript" src="{{ '/assets/js/vendor/jquery.min.js' | prepend: site.baseurl  | escape}}"></script>
+<script type="text/javascript" src="{{ '/assets/js/vendor/modernizr.js'| prepend: site.baseurl  | escape}}"></script>
+<script type="text/javascript" src="{{ '/assets/js/vendor/bootstrap.min.js'| prepend: site.baseurl  | escape}}"></script>
+<script type="text/javascript" src="{{ '/assets/js/utilities.js'| prepend: site.baseurl  | escape}}"></script>
+<script type="text/javascript" src="{{ '/assets/js/vendor/outdatedbrowser.min.js' | prepend: site.baseurl | escape}}"></script>
+
+{% if page.layout == 'search' %}
+    <script type="text/javascript" src="{{ '/assets/js/search-utilities.js'| prepend: site.baseurl  | escape}}"></script>
+{% endif %}

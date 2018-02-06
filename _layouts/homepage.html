@@ -1,0 +1,28 @@
+---
+layout: base
+---
+
+{% if page.header.is-visible %}
+
+
+
+{% endif %}
+
+{% if page.cyber-first-news.is-visible %}
+
+{% assign category = posts.categories %}
+{% assign latest3Posts = site.categories[category] | limit:3 %}
+
+{% if site.categories[category] == null %}
+    {% assign latest3Posts = site.posts | limit:4 %}
+{% endif %}
+
+    <section class='row recent-news'>
+        <div class='section-container'>  
+            <h2>{{page.latest_news.title}}</h2>
+           
+        </div>
+    </section>
+{% endif %}
+
+{% include promo.html %}
