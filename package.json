@@ -13,7 +13,7 @@
     "license": "ISC",
     "repository": {
       "type": "git",
-      "url": ""
+      "url": "https://engineering/bitbucket/projects/CREATIVE/repos/creative-jekyll-cms-seed/"
     },
     "devDependencies": {},
     "dependencies": {}
